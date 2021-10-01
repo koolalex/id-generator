@@ -88,7 +88,9 @@ class IdWorker(object):
       timestamp = self._gen_timestamp()
     return timestamp
 
-class ExampleCommand(sublime_plugin.TextCommand):
-	def run(self, edit):
-		worker = IdWorker()
-		self.view.insert(edit, 0, str(worker.get_id()))
+class GenCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    worker = IdWorker()
+    view = self.view
+    point = self.view.sel()[0].begin()
+    view.insert(edit, point, str(worker.get_id()))
