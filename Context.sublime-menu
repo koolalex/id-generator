@@ -1,0 +1,3 @@
+[
+	{ "command": "gen", "caption": "generate snowflake id" },
+]

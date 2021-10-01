@@ -1,0 +1,6 @@
+[
+  {
+    "caption": "generate snowfake id",
+    "command": "idgen"
+  }
+]
