@@ -92,5 +92,6 @@ class GenCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     worker = IdWorker()
     view = self.view
-    point = self.view.sel()[0].begin()
-    view.insert(edit, point, str(worker.get_id()))
+    selection = view.sel()
+    for i in range(0,len(selection)):
+        view.insert(edit,selection[i].begin(),str(worker.get_id()))
