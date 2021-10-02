@@ -1,6 +1,3 @@
 [
-  {
-    "caption": "generate snowfake id",
-    "command": "idgen"
-  }
+  {"caption": "idgen: Generatem New Snowflake Id ", "command": "gen"} 
 ]
